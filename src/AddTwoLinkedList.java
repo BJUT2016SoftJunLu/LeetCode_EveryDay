@@ -13,7 +13,7 @@
 
 import java.util.LinkedList;
 
-public class AddTwoNumbers {
+public class AddTwoLinkedList {
 
     public static LinkedList<Integer> addTwoNumbers(LinkedList<Integer> l1, LinkedList<Integer> l2) {
 
@@ -31,7 +31,6 @@ public class AddTwoNumbers {
             }else{
                 sum = l1_number + l2_number;
             }
-
             carry = sum/10;
             if(carry == 0){
                 result_list.addLast(sum);
@@ -56,7 +55,7 @@ public class AddTwoNumbers {
         l2.add(1);
         l2.add(2);
 
-        LinkedList result_list = AddTwoNumbers.addTwoNumbers(l1,l2);
+        LinkedList result_list = AddTwoLinkedList.addTwoNumbers(l1,l2);
         for(int i = 0;i < result_list.size();i ++){
             System.out.println(result_list.get(i));
         }
