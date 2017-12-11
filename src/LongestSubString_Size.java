@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 
 /*
@@ -55,6 +56,16 @@ public class LongestSubString_Size {
         int length = str.length();
         System.out.println(LongestSubString_Size.maxSubString(str,length));
         System.out.println(LongestSubString_Size.maxSubSize(str,length));
+
+
+        String indexName = "test-日期-维度-期刊 ";
+        String []name_dimension = Arrays.copyOfRange(indexName.split("-"),1,indexName.split("-").length);
+
+        Arrays.sort(name_dimension);
+
+        for(String name:name_dimension){
+            System.out.print(name);
+        }
     }
 
 }
