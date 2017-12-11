@@ -33,7 +33,6 @@ public class ZigZagConversion {
                         sb.append(str.charAt(tmp));
                     }
                 }
-
             }
         }
         return sb.toString();
