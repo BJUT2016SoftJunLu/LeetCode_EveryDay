@@ -8,7 +8,6 @@ public class LetterCombinationsOfPhoneNumber {
     public static HashMap<Integer,String> map = new HashMap<Integer,String>();
 
     static {
-
         map.put(2,"a,b,c");
         map.put(3,"d,e,f");
         map.put(4,"g,h,i");
@@ -99,10 +98,6 @@ public class LetterCombinationsOfPhoneNumber {
 
     public static void main(String[] args) {
 
-//        List<String> result = LetterCombinationsOfPhoneNumber.letterCombinations("2,3,6");
-//        for(String str:result){
-//            System.out.print(str+",");
-//        }
         List<String> result = new ArrayList<String>();
         letterCombinations_version2(result,"","2,3,6","");
         System.out.println(result.size());
