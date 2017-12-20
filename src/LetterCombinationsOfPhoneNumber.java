@@ -22,6 +22,10 @@ public class LetterCombinationsOfPhoneNumber {
     *  Time complexity : O(n^3)
     *  Space complexity : O(1)
     * */
+
+    /*
+    * 迭代法
+    * */
     public static List<String> letterCombinations_version1(String digits) {
 
         List<String> result = new ArrayList<String>();
