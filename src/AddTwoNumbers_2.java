@@ -5,7 +5,7 @@
 * The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
   You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-    Example
+    Example   (加法的实现算法)
     Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
     Output: 7 -> 0 -> 8
     Explanation: 342 + 465 = 807.
@@ -13,7 +13,7 @@
 
 import java.util.LinkedList;
 
-public class AddTwoLinkedList {
+public class AddTwoNumbers_2 {
 
     public static LinkedList<Integer> addTwoNumbers(LinkedList<Integer> l1, LinkedList<Integer> l2) {
 
@@ -55,7 +55,7 @@ public class AddTwoLinkedList {
         l2.add(1);
         l2.add(2);
 
-        LinkedList result_list = AddTwoLinkedList.addTwoNumbers(l1,l2);
+        LinkedList result_list = AddTwoNumbers_2.addTwoNumbers(l1,l2);
         for(int i = 0;i < result_list.size();i ++){
             System.out.println(result_list.get(i));
         }
