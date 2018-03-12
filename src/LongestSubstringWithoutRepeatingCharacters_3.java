@@ -4,7 +4,7 @@ import java.util.HashSet;
 /*
 * 求最大子串、最大子串长度
 * */
-public class LongestSubString_Size {
+public class LongestSubstringWithoutRepeatingCharacters_3 {
 
 
     /*
@@ -54,8 +54,8 @@ public class LongestSubString_Size {
     public static void main(String []args){
         String str = "jkklmmds";
         int length = str.length();
-        System.out.println(LongestSubString_Size.maxSubString(str,length));
-        System.out.println(LongestSubString_Size.maxSubSize(str,length));
+        System.out.println(LongestSubstringWithoutRepeatingCharacters_3.maxSubString(str,length));
+        System.out.println(LongestSubstringWithoutRepeatingCharacters_3.maxSubSize(str,length));
 
 
         String indexName = "test-日期-维度-期刊 ";
