@@ -3,9 +3,7 @@
 * Given a string s, find the longest palindromic substring in s
 * */
 
-import com.sun.deploy.util.StringUtils;
-
-public class LongestPalindromicSubString {
+public class LongestPalindromicSubString_5 {
 
     /*
     *   Dynamic Programming
@@ -50,7 +48,7 @@ public class LongestPalindromicSubString {
     public static void main(String []args){
 
         String s = "caba";
-        System.out.println(LongestPalindromicSubString.longestPalindrom_version1(s));
+        System.out.println(LongestPalindromicSubString_5.longestPalindrom_version1(s));
 
     }
 

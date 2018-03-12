@@ -10,8 +10,7 @@
 
 import java.util.*;
 
-public class Sum3 {
-
+public class Sum3_15 {
 
     /*
     *  Time complexity : O(n^3)
@@ -107,7 +106,7 @@ public class Sum3 {
 
     public static void main(String[] args) {
 
-        List<Integer[]> result = Sum3.Sum3_version2(new int[]{-1, 0, 1, 2, -1, -4});
+        List<Integer[]> result = Sum3_15.Sum3_version2(new int[]{-1, 0, 1, 2, -1, -4});
         for(Integer[] array:result){
             for(Integer number:array){
                 System.out.print(number);
