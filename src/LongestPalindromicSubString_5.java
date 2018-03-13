@@ -15,31 +15,57 @@ public class LongestPalindromicSubString_5 {
     * */
 
 
-    public static String longestPalindrom_version1(String s){
-        int length = s.length();
+
+    public static String longestPalindrome(String str){
+        String result = "";
+
+        boolean mark = false;
         int start = 0;
-        int max_length = 1;
-        boolean is_pal = false;
-        for(int i = 0;i < length;i ++){
-            for(int j = 0;j <= i;j ++){
-                if(i - j == 0){
-                    is_pal = true;
-                }else if(i - j  == 1){
-                    is_pal = s.charAt(j) == s.charAt(i) ? true:false;
-                }else{
-                    if(s.charAt(j) == s.charAt(i) && s.charAt(i - 1) == s.charAt(j + 1)){
-                        is_pal = true;
-                    }
+        int maxLength = 0;
+
+        for(int i=0;i<str.length();i++){
+            for(int j=0;j<i;j++){
+                if(i - j == 1){
+                    mark = str.charAt(i) == str.charAt(j) ? true:false;
+                }else if(i - j > 1){
+                    mark = isPalindromic(str.substring(j,i + 1));
                 }
-                if(is_pal==true && max_length < (i - j + 1)){
-                    max_length = i - j + 1;
+                if(mark == true && maxLength < (i - j + 1)){
+                    maxLength = i - j + 1;
                     start = j;
                 }
-                is_pal = false;
+                mark = false;
             }
         }
-        return start+"    "+max_length;
+
+        result = str.substring(start,start + maxLength);
+
+        return result;
     }
+
+
+    /*
+    * 判断
+    * */
+    public static boolean isPalindromic(String str){
+
+        if(str == null || str.length() == 0){
+            return false;
+        }
+        if(str.length() == 1){
+            return true;
+        }
+        if(str.length() == 2){
+            return str.charAt(0) == str.charAt(1) ? true:false;
+        }
+
+        if(str.charAt(0) == str.charAt(str.length() - 1)){
+            return isPalindromic(str.substring(1,str.length() - 1));
+        }else{
+            return false;
+        }
+    }
+
 
 
 
@@ -47,8 +73,9 @@ public class LongestPalindromicSubString_5 {
 
     public static void main(String []args){
 
-        String s = "caba";
-        System.out.println(LongestPalindromicSubString_5.longestPalindrom_version1(s));
+        String s = "abbaabccba";
+
+        System.out.println(longestPalindrome(s));
 
     }
 
