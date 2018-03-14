@@ -4,22 +4,34 @@
   Output:  321
 * */
 
-public class ReverseInteger_7 {
+import java.util.InputMismatchException;
 
+public class ReverseInteger_7 {
 
     public static Integer reverseInteger(int x){
 
-        int a = 0,b = x;
-        while(b > 0){
-            //先求摸，后乘10
-            a = a * 10 + b % 10;
-            b = b / 10;
+        int result = 0;
+        boolean isNative = x > 0 ? false:true;
+        x = Math.abs(x);
+        int tmp = 0;
+        while(x > 0){
+            tmp = result;
+            result = result * 10 + x % 10;
+            //防止溢出
+            if((result - x % 10) / 10 != tmp){
+                return 0;
+            }
+            x = x / 10;
         }
-        return a;
+        if(isNative){
+            result = - result;
+        }
+        return result;
+
     }
 
     public static void main(String []args){
-        System.out.println(ReverseInteger_7.reverseInteger(123));
+        System.out.println(ReverseInteger_7.reverseInteger(-123));
     }
 
 }

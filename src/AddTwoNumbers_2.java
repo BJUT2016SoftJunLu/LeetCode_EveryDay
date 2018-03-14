@@ -60,8 +60,6 @@ public class AddTwoNumbers_2 {
             System.out.println(result_list.get(i));
         }
 
-
-
     }
 
 }
