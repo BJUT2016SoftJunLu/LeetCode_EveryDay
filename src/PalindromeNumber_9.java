@@ -4,11 +4,10 @@
 * */
 
 
-public class PalindromeNumber {
+public class PalindromeNumber_9 {
 
-
-    public static boolean isPalindromeNumber(int number){
-
+    public static boolean isPalindrome(int number){
+        //先将整数reverse，然后在比较是否相等
         int a = 0,b = number;
         while(b != 0){
             a = a * 10 + b % 10;
@@ -21,8 +20,9 @@ public class PalindromeNumber {
         }
     }
 
-    public static void main(String []args){
-        System.out.println(PalindromeNumber.isPalindromeNumber(1212));
+    public static void main(String[] args) {
+        int number = 123321;
+        System.out.println(isPalindrome(number));
     }
 
 }
