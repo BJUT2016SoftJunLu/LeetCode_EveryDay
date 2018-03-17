@@ -12,26 +12,25 @@
 *
 * */
 
-public class ContainerWithMostWater {
+public class ContainerWithMostWate_11 {
 
 
-    public static int maxArea(int []heights){
-
-        int left = 0,right = heights.length - 1;
+    public static int MaxArea(int[] height){
+        int left = 0, right = height.length - 1;
         int maxArea = 0;
-        while(left < right){
-            maxArea = Math.max(maxArea,Math.min(heights[left],heights[right]) * right - left);
-            if(heights[left] < heights[right]){
-                left ++;
+        while (left < right){
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
+            if (height[left] > height[right]){
+                right--;
             }else{
-                right --;
+                left++;
             }
         }
         return maxArea;
     }
 
     public static void main(String[] args) {
-        System.out.println(ContainerWithMostWater.maxArea(new int[]{10,45,4,88,65,21,33}));
+        System.out.println(ContainerWithMostWate_11.MaxArea(new int[]{1,2,4,3}));
     }
 
 }
