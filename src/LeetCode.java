@@ -49,6 +49,23 @@ public class LeetCode {
 
     }
 
+    public static int reverseInteger(int x){
+        int result = 0;
+        boolean isNative = false;
+        if(x < 0){
+            x = -x;
+            isNative = true;
+        }
+        while(x > 0){
+            result = result * 10 + x % 10;
+            x = x / 10;
+        }
+        if(isNative == true){
+            result = - result;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
 
 //        int []nums =  new int[]{2, 7, 11, 15};
@@ -57,18 +74,21 @@ public class LeetCode {
 //        System.out.println(result[0] + "," + result[1]);
 
 
-        LinkedList l1 = new LinkedList();
-        l1.add(2);
-        l1.add(4);
-        l1.add(3);
-        LinkedList l2 = new LinkedList();
-        l2.add(5);
-        l2.add(6);
-        l2.add(4);
-        LinkedList<Integer> resultList  = addTwoNumbers(l1,l2);
-        for(int i : resultList){
-            System.out.println(i);
-        }
+//        LinkedList l1 = new LinkedList();
+//        l1.add(2);
+//        l1.add(4);
+//        l1.add(3);
+//        LinkedList l2 = new LinkedList();
+//        l2.add(5);
+//        l2.add(6);
+//        l2.add(4);
+//        LinkedList<Integer> resultList  = addTwoNumbers(l1,l2);
+//        for(int i : resultList){
+//            System.out.println(i);
+//        }
+
+        System.out.println(reverseInteger(1534236469));
+
 
     }
 
